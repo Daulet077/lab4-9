@@ -27,7 +27,7 @@ pipeline {
   }
   post {
     always {
-      sh 'docker rmi $IMAGE:BUILD_NUMBER || true'
+      sh 'docker rmi $IMAGE:$BUILD_NUMBER || true'
     }
   }
 }
